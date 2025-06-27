@@ -3,7 +3,7 @@ let totalGeral = 0
 limpar();
 
 
-function adicionar(){
+function adicionar() {
     // Recuperar valores: nome do produto , quantridade e valor
     let produto = document.getElementById('produto').value;
     let nomeProduto = produto.split('-')[0];
@@ -14,7 +14,7 @@ function adicionar(){
     // Adicionar o prod no carrinho 
     let listaCarrinho = document.getElementById('lista-produtos');
     listaCarrinho.innerHTML = listaCarrinho.innerHTML +
-    `<section class="carrinho__produtos__produto">
+        `<section class="carrinho__produtos__produto">
           <span class="texto-azul">${quantidade}</span> ${nomeProduto} <span class="texto-azul">R$${preco}</span>
     </section>`
 
@@ -28,10 +28,9 @@ function adicionar(){
 }
 
 
-function limpar(){
+function limpar() {
     // Limpar o carrinho
-   totalGeral = 0
-   document.getElementById('lista-produtos').innerHTML = 0;
-   document.getElementById('valor-total').textContent = 'R$0';
-
+    totalGeral = 0
+    document.getElementById('lista-produtos').innerHTML = 0;
+    document.getElementById('valor-total').textContent = 'R$0';
 }
